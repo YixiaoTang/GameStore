@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">GameStore</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">Y7LfslaNFxyOwxiLC4NTYUgaPYFDhMD5res9yFAX</string>
+    <string name="back4app_client_key">9FlhbbjTxQbGBQO7pkyMxUyvfYg0ic5TjGCTzd9a</string>
+</resources>
