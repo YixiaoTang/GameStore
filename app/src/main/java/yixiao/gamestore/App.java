@@ -1,7 +1,15 @@
 package yixiao.gamestore;
 
 import com.parse.Parse;
+import com.parse.ParseObject;
+
 import android.app.Application;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import yixiao.gamestore.Common.Game;
+import yixiao.gamestore.Common.ReadGame;
 
 
 public class App extends Application {
@@ -17,5 +25,7 @@ public class App extends Application {
         );
 
 
+        ArrayList<Game> games = ReadGame.readObject();
+        System.out.print(games);
     }
 }
