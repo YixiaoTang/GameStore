@@ -1,8 +1,7 @@
-package yixiao.gamestore.Common;
+package yixiao.gamestore.common;
 import android.util.Log;
 
 import com.parse.FindCallback;
-import com.parse.GetCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;

@@ -1,15 +1,13 @@
 package yixiao.gamestore;
 
 import com.parse.Parse;
-import com.parse.ParseObject;
 
 import android.app.Application;
 
 import java.util.ArrayList;
-import java.util.List;
 
-import yixiao.gamestore.Common.Game;
-import yixiao.gamestore.Common.ReadGame;
+import yixiao.gamestore.common.Game;
+import yixiao.gamestore.common.ReadGame;
 
 
 public class App extends Application {

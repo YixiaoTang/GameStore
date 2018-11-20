@@ -1,4 +1,4 @@
-package yixiao.gamestore.Common;
+package yixiao.gamestore.common;
 import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;

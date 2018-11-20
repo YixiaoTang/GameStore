@@ -1,4 +1,4 @@
-package yixiao.gamestore.MVP;
+package yixiao.gamestore.mvp;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

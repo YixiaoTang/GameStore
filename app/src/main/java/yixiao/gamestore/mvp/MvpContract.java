@@ -1,4 +1,4 @@
-package yixiao.gamestore.MVP;
+package yixiao.gamestore.mvp;
 
 public interface MvpContract {
     interface View<P extends Presenter> {

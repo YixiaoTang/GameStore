@@ -1,4 +1,4 @@
-package yixiao.gamestore.Common;
+package yixiao.gamestore.common;
 
 public class Game {
     private String name;
