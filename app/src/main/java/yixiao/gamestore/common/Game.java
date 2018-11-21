@@ -3,7 +3,7 @@ package yixiao.gamestore.common;
 public class Game {
     private String name;
     private String image;
-    private int price;
+    private String price;
     private int gameId;
     public void setGameId(int gameId) {
         this.gameId = gameId;
@@ -17,7 +17,7 @@ public class Game {
         this.name = name;
     }
 
-    public void setPrice(int price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
@@ -25,7 +25,7 @@ public class Game {
         return gameId;
     }
 
-    public int getPrice() {
+    public String getPrice() {
         return price;
     }
 

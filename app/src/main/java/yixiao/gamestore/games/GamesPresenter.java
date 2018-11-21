@@ -14,9 +14,9 @@ public class GamesPresenter implements GamesContract.Presenter {
         model.setPresenter(this);
     }
     @Override
-    public void loadGames(List<Game> GameList) {
+    public void loadGames(List<Game> gameList) {
         if (view != null) {
-            view.loadGames(GameList);
+            view.loadGames(gameList);
         }
     }
 
@@ -33,11 +33,11 @@ public class GamesPresenter implements GamesContract.Presenter {
     @Override
     public void onViewAttached(GamesContract.View view) {
         this.view = view;
-        //this.model.fetchData();
+        this.model.fetchData();
     }
 
     @Override
     public void onViewDetached() {
-
+        this.view = null;
     }
 }

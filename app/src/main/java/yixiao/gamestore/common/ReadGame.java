@@ -20,7 +20,7 @@ public class ReadGame {
                     for(ParseObject object : GameList){
                         Game game = new Game();
                         game.setGameId(object.getInt("gameId"));
-                        game.setPrice(object.getInt("price"));
+                        game.setPrice(object.getString("price"));
                         game.setName(object.getString("name"));
                         game.setImage(object.getString("image"));
                         games.add(game);

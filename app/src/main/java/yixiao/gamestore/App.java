@@ -22,8 +22,5 @@ public class App extends Application {
                 .build()
         );
 
-
-        ArrayList<Game> games = ReadGame.readObject();
-        System.out.print(games);
     }
 }

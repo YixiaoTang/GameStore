@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import yixiao.gamestore.R;
-//import com.laioffer.tinnews.save.SavedNewsFragment;
-//import com.laioffer.tinnews.tin.TinGalleryFragment;
+import yixiao.gamestore.games.GamesFragment;
+import yixiao.gamestore.games.comments.CommentsFragment;
 
 
 public class ContainerFragment extends Fragment{
@@ -78,7 +78,7 @@ public class ContainerFragment extends Fragment{
     private static Fragment createInitFragmentByIndex(int pageIndex) {
         switch (pageIndex) {
             case GAMES_PAGE:
-                return null;
+                return GamesFragment.newInstance();
             case FUNCTIONS_PAGE:
                 return null;
             case BANK_CARD_PAGE:

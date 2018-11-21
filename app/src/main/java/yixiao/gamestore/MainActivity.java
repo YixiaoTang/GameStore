@@ -2,13 +2,16 @@ package yixiao.gamestore;
 
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
 import yixiao.gamestore.common.ContainerFragment;
+import yixiao.gamestore.common.GameBasicActivity;
+import yixiao.gamestore.common.GameBasicFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends GameBasicActivity {
 
     private ViewPager viewPager;
     private BottomNavigationView bottomBar;
@@ -36,5 +39,32 @@ public class MainActivity extends AppCompatActivity {
 
 
         //ParseInstallation.getCurrentInstallation().saveInBackground();
+    }
+
+    @Override
+    public void onBackPressed() {
+        FragmentManager fragmentManager = getCurrentChildFragmentManager();
+        if (fragmentManager.getBackStackEntryCount() > 0) {
+            fragmentManager.popBackStack();
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public void doFragmentTransaction(GameBasicFragment basicFragment) {
+        FragmentTransaction fragmentTransaction = getCurrentChildFragmentManager().beginTransaction();
+        fragmentTransaction.replace(
+                R.id.child_fragment_container,
+                basicFragment,
+                basicFragment.getFragmentTag()).addToBackStack(null).commit();
+
+    }
+    private FragmentManager getCurrentChildFragmentManager() {
+        return adapter.getItem(viewPager.getCurrentItem()).getChildFragmentManager();
+    }
+    @Override
+    protected int getLayout() {
+        return R.layout.activity_main;
     }
 }
