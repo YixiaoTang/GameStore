@@ -14,7 +14,7 @@ public class CommentsPresenter implements CommentsContract.Presenter {
 
     @Override
     public void loadComments(List<Comment> commentList) {
-        if (view != null) {
+        if (view != null&&commentList!=null) {
             view.loadComments(commentList);
         }
     }

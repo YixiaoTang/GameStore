@@ -52,7 +52,7 @@ public class CommentsAdapter extends StickHeaderRecyclerView<Comment, CommentHea
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-        if (holder instanceof CommentsViewHolder && position - NUM_MODEL_BEFORE_COMMENTS<commentList.size()) {
+        if (holder instanceof CommentsViewHolder && (position - NUM_MODEL_BEFORE_COMMENTS)<commentList.size()) {
             Comment comment = commentList.get(position-NUM_MODEL_BEFORE_COMMENTS);
             ((CommentsViewHolder) holder).comment.setText(comment.getComment());
             ((CommentsViewHolder) holder).name.setText(comment.getName());
@@ -106,7 +106,6 @@ public class CommentsAdapter extends StickHeaderRecyclerView<Comment, CommentHea
             avatar = itemView.findViewById(R.id.avatar);
         }
     }
-
 
 
 }
