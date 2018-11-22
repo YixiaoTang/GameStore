@@ -1,6 +1,7 @@
 package yixiao.gamestore.games;
 
 import android.os.Bundle;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -20,6 +21,7 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
 
     private TextView emptyState;
     private ViewModelAdapter GamesAdapter;
+    private SwipeRefreshLayout swipeRefreshLayout;
 
     public static GamesFragment newInstance() {
         Bundle args = new Bundle();
@@ -59,6 +61,14 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
         emptyState = view.findViewById(R.id.empty_state);
         GamesAdapter = new ViewModelAdapter();
         recyclerView.setAdapter(GamesAdapter);
+        swipeRefreshLayout = view.findViewById(R.id.layout_swipe_refresh);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                newInstance();
+                swipeRefreshLayout.setRefreshing(false);
+            }
+        });
         return view;
     }
 

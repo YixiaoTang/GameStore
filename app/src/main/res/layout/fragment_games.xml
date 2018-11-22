@@ -6,20 +6,27 @@
 
     <TextView
         android:id="@+id/main_titleBar"
-        android:background="@color/colorPrimary"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_vertical"
         android:paddingLeft="5dp"
         android:text="@string/app_name"
         android:textColor="@color/white"
-        android:gravity="center_vertical"
-        android:textSize="20dp"
-        android:layout_height="50dp" />
+        android:textSize="20dp" />
 
-    <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/recycler_view"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/layout_swipe_refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/main_titleBar" />
+        android:layout_below="@id/main_titleBar">
+
+        <android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/main_titleBar" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
     <TextView
         android:id="@+id/empty_state"
