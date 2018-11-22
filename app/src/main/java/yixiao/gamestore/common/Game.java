@@ -1,6 +1,14 @@
 package yixiao.gamestore.common;
 
-public class Game {
+import android.arch.persistence.room.Entity;
+
+
+import java.io.Serializable;
+
+
+@Entity
+public class Game implements Serializable {
+
     private String name;
     private String image;
     private String price;

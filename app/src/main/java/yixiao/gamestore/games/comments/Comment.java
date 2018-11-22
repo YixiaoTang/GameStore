@@ -1,6 +1,8 @@
-package yixiao.gamestore.common;
+package yixiao.gamestore.games.comments;
 
-public class Comment {
+import com.saber.stickyheader.stickyData.StickyMainData;
+
+public class Comment implements StickyMainData {
     private String name;
     private String avatar;
     private String comment;

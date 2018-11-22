@@ -1,6 +1,5 @@
 package yixiao.gamestore.games.comments;
 
-import yixiao.gamestore.common.Comment;
 import yixiao.gamestore.mvp.MvpContract;
 import java.util.List;
 

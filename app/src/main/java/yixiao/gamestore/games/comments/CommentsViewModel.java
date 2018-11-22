@@ -9,7 +9,6 @@ import com.squareup.picasso.Picasso;
 
 import yixiao.gamestore.R;
 import yixiao.gamestore.common.BaseViewModel;
-import yixiao.gamestore.common.Comment;
 import yixiao.gamestore.common.GameFragmentManager;
 
 public class CommentsViewModel extends BaseViewModel<CommentsViewModel.CommentsViewHolder> {

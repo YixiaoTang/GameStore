@@ -42,7 +42,7 @@ public class GamesViewModel extends BaseViewModel<GamesViewModel.GamesViewHolder
         Picasso.get().load(game.getImage()).into(holder.image);
 
         holder.itemView.setOnClickListener(v -> {
-            fragmentManager.doFragmentTransaction(CommentsFragment.newInstance());
+            fragmentManager.doFragmentTransaction(CommentsFragment.newInstance(game));
         });
     }
 

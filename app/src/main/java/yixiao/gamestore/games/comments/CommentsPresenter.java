@@ -2,8 +2,6 @@ package yixiao.gamestore.games.comments;
 
 import java.util.List;
 
-import yixiao.gamestore.common.Comment;
-
 public class CommentsPresenter implements CommentsContract.Presenter {
 
     private final CommentsContract.Model model;
