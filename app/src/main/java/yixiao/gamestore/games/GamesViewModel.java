@@ -1,17 +1,14 @@
 package yixiao.gamestore.games;
 
-import android.graphics.Bitmap;
-import android.support.annotation.DrawableRes;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import com.squareup.picasso.Picasso;
-import okhttp3.internal.Util;
 import yixiao.gamestore.R;
 import yixiao.gamestore.common.BaseViewModel;
-import yixiao.gamestore.common.GameFragmentManager;
 import yixiao.gamestore.common.Game;
+import yixiao.gamestore.common.GameFragmentManager;
 import yixiao.gamestore.games.comments.CommentsFragment;
 
 

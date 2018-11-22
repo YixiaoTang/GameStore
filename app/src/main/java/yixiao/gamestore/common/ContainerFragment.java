@@ -7,10 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import yixiao.gamestore.R;
 import yixiao.gamestore.games.GamesFragment;
-import yixiao.gamestore.games.comments.CommentsFragment;
 
 
-public class ContainerFragment extends Fragment{
+public class ContainerFragment extends Fragment {
     public static final int GAMES_PAGE = 0;
     public static final String GAMES_PAGE_TAG = "games_page";
     public static final int FUNCTIONS_PAGE = 1;

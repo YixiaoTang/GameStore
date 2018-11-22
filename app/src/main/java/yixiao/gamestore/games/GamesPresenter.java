@@ -1,7 +1,6 @@
 package yixiao.gamestore.games;
 
 import java.util.List;
-
 import yixiao.gamestore.common.Game;
 
 public class GamesPresenter implements GamesContract.Presenter {

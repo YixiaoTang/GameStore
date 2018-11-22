@@ -20,14 +20,11 @@ public class GameBasicFragment extends Fragment{
     public void onAttach(Context context) {
         super.onAttach(context);
         gameFragmentManager = (GameFragmentManager) context;
-        //Context is MainActivity
-        //所有的Activity 用了GameBasicActivity ->GameFragmentManager
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_game_basic, container, false);
     }
 

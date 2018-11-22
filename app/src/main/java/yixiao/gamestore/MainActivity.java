@@ -37,8 +37,7 @@ public class MainActivity extends GameBasicActivity {
             }
         });
 
-
-        //ParseInstallation.getCurrentInstallation().saveInBackground();
+        
     }
 
     @Override
