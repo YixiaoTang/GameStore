@@ -20,6 +20,11 @@ public class CommentsPresenter implements CommentsContract.Presenter {
     }
 
     @Override
+    public void fetchData(int gameId) {
+        this.model.fetchData(gameId);
+    }
+
+    @Override
     public void onCreate() {
 
     }
@@ -32,7 +37,7 @@ public class CommentsPresenter implements CommentsContract.Presenter {
     @Override
     public void onViewAttached(CommentsContract.View view) {
         this.view = view;
-        this.model.fetchData(1);
+
     }
 
     @Override

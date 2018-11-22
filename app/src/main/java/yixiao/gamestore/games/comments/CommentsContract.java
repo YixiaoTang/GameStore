@@ -10,6 +10,7 @@ public interface CommentsContract  {
 
     interface Presenter extends  MvpContract.Presenter<View, Model> {
         void loadComments (List<Comment> commentList);
+        void fetchData(int gameId);
     }
 
     interface Model extends MvpContract.Model<Presenter> {

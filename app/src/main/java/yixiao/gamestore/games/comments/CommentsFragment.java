@@ -46,13 +46,12 @@ public class CommentsFragment extends MvpFragment<CommentsContract.Presenter> im
     @Override
     public void onResume() {
         super.onResume();
-
     }
 
     @Override
     public void onStart() {
         super.onStart();
-
+        presenter.fetchData(game.getGameId());
     }
 
     @Override
