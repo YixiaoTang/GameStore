@@ -16,7 +16,7 @@ import yixiao.gamestore.common.Game;
 import yixiao.gamestore.common.ViewModelAdapter;
 import yixiao.gamestore.mvp.MvpFragment;
 
-public class GamesFragment extends MvpFragment<GamesContract.Presenter> implements GamesContract.View{
+public class GamesFragment extends MvpFragment<GamesContract.Presenter> implements GamesContract.View {
 
     private TextView emptyState;
     private ViewModelAdapter GamesAdapter;
@@ -34,7 +34,6 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
     }
 
 
-
     @Override
     public void loadGames(List<Game> gameList) {
         if (gameList.size() == 0) {
@@ -42,7 +41,7 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
         } else {
             emptyState.setVisibility(View.GONE);
         }
-        if (gameList != null) {
+        if (gameList.size()>0) {
             List<GamesViewModel> models = new LinkedList<>();
             for (Game game : gameList) {
                 models.add(new GamesViewModel(game, gameFragmentManager));
@@ -50,8 +49,6 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
             GamesAdapter.addViewModels(models);
         }
     }
-
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -62,10 +59,9 @@ public class GamesFragment extends MvpFragment<GamesContract.Presenter> implemen
         emptyState = view.findViewById(R.id.empty_state);
         GamesAdapter = new ViewModelAdapter();
         recyclerView.setAdapter(GamesAdapter);
-
         return view;
-
     }
+
     @Override
     public void onStart() {
         super.onStart();

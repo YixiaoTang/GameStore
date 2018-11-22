@@ -32,8 +32,4 @@ public abstract class GameBasicActivity extends AppCompatActivity implements Gam
     }
 
 
-    @Override
-    public void showSnackBar(String message) {
-
-    }
 }

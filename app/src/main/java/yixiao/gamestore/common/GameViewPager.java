@@ -15,6 +15,7 @@ public class GameViewPager extends ViewPager{
     }
 
     @Override
+    //No swipe
     public boolean onInterceptTouchEvent(MotionEvent event) {
         //return super.onInterceptTouchEvent(event);
         return false;

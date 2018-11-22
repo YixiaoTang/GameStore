@@ -15,8 +15,6 @@ public class GamesModel implements GamesContract.Model {
 
     private GamesContract.Presenter presenter;
 
-
-
     @Override
     public void fetchData() {
         /**Hard code to test fetch data.
@@ -26,6 +24,7 @@ public class GamesModel implements GamesContract.Model {
          game.setName("The Legend of Zelda");
          game.setImage("https://cdn.images.dailystar.co.uk/dynamic/184/photos/778000/620x/5a745632e74a2_LegendofZeldaonNintendoSwitchsettomakeBIGchangeafterBreathoftheWildsuccess619697.jpg");
          gameList.add(game);
+         presenter.loadGames(gameList);
          */
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Game");
         query.findInBackground(new FindCallback<ParseObject>() {
@@ -47,9 +46,6 @@ public class GamesModel implements GamesContract.Model {
                 }
             }
         });
-
-
-        //presenter.loadGames(gameList);
     }
 
     @Override

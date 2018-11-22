@@ -1,8 +1,6 @@
 package yixiao.gamestore.common;
 
 import android.arch.persistence.room.Entity;
-
-
 import java.io.Serializable;
 
 
