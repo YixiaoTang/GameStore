@@ -35,7 +35,6 @@
             android:name="com.parse.REST_API_Key"
             android:value="@string/back4app_rest_api_key" />
 
-        <activity android:name=".CommentActivity" android:theme="@android:style/Theme.NoTitleBar"></activity>
     </application>
 
 </manifest>
