@@ -7,13 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.saber.stickyheader.stickyView.StickHeaderRecyclerView;
 import com.squareup.picasso.Picasso;
-
 import java.util.LinkedList;
 import java.util.List;
-
 import yixiao.gamestore.R;
 import yixiao.gamestore.common.Game;
 
@@ -57,7 +54,6 @@ public class CommentsAdapter extends StickHeaderRecyclerView<Comment, CommentHea
             ((CommentsViewHolder) holder).comment.setText(comment.getComment());
             ((CommentsViewHolder) holder).name.setText(comment.getName());
             Picasso.get().load(comment.getAvatar()).into(((CommentsViewHolder) holder).avatar);
-
         } else if (holder instanceof HeaderCommentBarViewHolder){
             ((HeaderCommentBarViewHolder) holder).bindData();
         }else if (holder instanceof HeaderImageViewHolder){
@@ -77,7 +73,6 @@ public class CommentsAdapter extends StickHeaderRecyclerView<Comment, CommentHea
             super(itemView);
             commentBar = itemView.findViewById(R.id.comment_bar);
         }
-
         void bindData() {
         }
     }

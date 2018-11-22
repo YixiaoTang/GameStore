@@ -17,37 +17,11 @@ public class ViewModelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         viewTypeMap = new SparseArrayCompat<>();
     }
 
-
     public void addViewModels(Collection<? extends BaseViewModel> viewModels) {
         this.viewModels.clear();
         this.viewTypeMap.clear();
         addAll(viewModels);
         notifyDataSetChanged();
-    }
-
-    public void addViewModel(BaseViewModel viewModel) {
-        this.viewModels.add(viewModel);
-        viewTypeMap.put(viewModel.getViewType(), viewModel);
-        int position = getPosition(viewModel);
-        notifyItemInserted(position);
-    }
-
-    public void removeViewModel(int position) {
-        if (position < -1 || position >= viewModels.size()) {
-            return;
-        }
-        viewModels.remove(position);
-        notifyItemRemoved(position);
-    }
-
-    private void removeViewModel(BaseViewModel viewModel) {
-        int position = getPosition(viewModel);
-        removeViewModel(position);
-    }
-
-    private int getPosition(BaseViewModel viewModel) {
-        int position = viewModels.indexOf(viewModel);
-        return  position;
     }
 
 
@@ -79,7 +53,6 @@ public class ViewModelAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         if (viewModels == null) {
             return;
         }
-
         for (BaseViewModel baseViewModel : viewModels) {
             this.viewModels.add(baseViewModel);
             viewTypeMap.put(baseViewModel.getViewType(), baseViewModel);

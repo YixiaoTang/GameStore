@@ -3,13 +3,11 @@ package yixiao.gamestore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-
 import yixiao.gamestore.common.ContainerFragment;
 
 public class GameFragmentPagerAdapter extends FragmentPagerAdapter {
     private Fragment[] fragments = new Fragment[FRAGMENT_NUMBER];
     public static int FRAGMENT_NUMBER = 4;
-
     public GameFragmentPagerAdapter(FragmentManager fm) {
         super(fm);
         for (int i = 0; i < FRAGMENT_NUMBER; i++) {

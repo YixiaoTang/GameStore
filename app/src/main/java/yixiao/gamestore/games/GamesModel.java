@@ -17,15 +17,6 @@ public class GamesModel implements GamesContract.Model {
 
     @Override
     public void fetchData() {
-        /**Hard code to test fetch data.
-         ArrayList<Game> gameList = new ArrayList<>();
-         Game game = new Game();
-         game.setPrice("3000");
-         game.setName("The Legend of Zelda");
-         game.setImage("https://cdn.images.dailystar.co.uk/dynamic/184/photos/778000/620x/5a745632e74a2_LegendofZeldaonNintendoSwitchsettomakeBIGchangeafterBreathoftheWildsuccess619697.jpg");
-         gameList.add(game);
-         presenter.loadGames(gameList);
-         */
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Game");
         query.findInBackground(new FindCallback<ParseObject>() {
             @Override

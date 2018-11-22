@@ -4,7 +4,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.squareup.picasso.Picasso;
 
 import yixiao.gamestore.R;
@@ -35,7 +34,6 @@ public class GamesViewModel extends BaseViewModel<GamesViewModel.GamesViewHolder
         holder.gameName.setText(game.getName());
         holder.price.setText(game.getPrice());
         Picasso.get().load(game.getImage()).into(holder.image);
-
         holder.itemView.setOnClickListener(v -> {
             fragmentManager.doFragmentTransaction(CommentsFragment.newInstance(game));
         });

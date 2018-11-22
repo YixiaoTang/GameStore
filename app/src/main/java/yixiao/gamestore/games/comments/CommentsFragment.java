@@ -24,10 +24,8 @@ import yixiao.gamestore.mvp.MvpFragment;
 
 public class CommentsFragment extends MvpFragment<CommentsContract.Presenter> implements CommentsContract.View{
     private static final String GAME = "game";
-    //private ViewModelAdapter CommentsAdapter;
     private CommentsAdapter adapter;
     private Game game;
-    private ArrayList<Comment> commentList;
     private boolean hasCommentHead;
 
     public static CommentsFragment newInstance(Game game){
@@ -37,11 +35,6 @@ public class CommentsFragment extends MvpFragment<CommentsContract.Presenter> im
         fragment.setArguments(args);
         return fragment;
     }
-
-    private void setCommentList(ArrayList<Comment> commentList){
-        this.commentList = commentList;
-    }
-
 
     @Override
     public void onResume() {
@@ -81,7 +74,6 @@ public class CommentsFragment extends MvpFragment<CommentsContract.Presenter> im
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         game = (Game)getArguments().getSerializable(GAME);
         View view = inflater.inflate(R.layout.fragment_comments, container, false);
         TextView textView = view.findViewById(R.id.comment_title_bar);
@@ -92,7 +84,6 @@ public class CommentsFragment extends MvpFragment<CommentsContract.Presenter> im
         recyclerView.setAdapter(adapter);
         hasCommentHead = false;
         return view;
-
     }
 
 

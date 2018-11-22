@@ -21,13 +21,10 @@ public class MainActivity extends GameBasicActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-
         viewPager = findViewById(R.id.viewpager);
         adapter = new GameFragmentPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(adapter);
         viewPager.setOffscreenPageLimit(GameFragmentPagerAdapter.FRAGMENT_NUMBER);
-
         bottomBar = findViewById(R.id.bottom_navigation);
         bottomBar.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -36,8 +33,6 @@ public class MainActivity extends GameBasicActivity {
                 return true;
             }
         });
-
-        
     }
 
     @Override
@@ -57,7 +52,6 @@ public class MainActivity extends GameBasicActivity {
                 R.id.child_fragment_container,
                 basicFragment,
                 basicFragment.getFragmentTag()).addToBackStack(null).commit();
-
     }
     private FragmentManager getCurrentChildFragmentManager() {
         return adapter.getItem(viewPager.getCurrentItem()).getChildFragmentManager();

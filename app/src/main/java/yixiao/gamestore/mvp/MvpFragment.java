@@ -2,7 +2,6 @@ package yixiao.gamestore.mvp;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 
 import yixiao.gamestore.common.GameBasicFragment;
 
@@ -44,7 +43,6 @@ public abstract class MvpFragment<P extends  MvpContract.Presenter> extends Game
         if (presenter != null) {
             presenter.onDestroy();
         }
-        //reference清空
         presenter = null;
     }
 

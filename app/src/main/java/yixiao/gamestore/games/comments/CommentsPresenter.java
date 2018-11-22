@@ -26,18 +26,15 @@ public class CommentsPresenter implements CommentsContract.Presenter {
 
     @Override
     public void onCreate() {
-
     }
 
     @Override
     public void onDestroy() {
-
     }
 
     @Override
     public void onViewAttached(CommentsContract.View view) {
         this.view = view;
-
     }
 
     @Override
